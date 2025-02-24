@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.ttk import *
 from tkinter import font
 
+#go test
 root=Tk()
 root.title('PwndaTxt')
 root.geometry('1200x620+10+10')
