@@ -4,6 +4,17 @@ from tkinter import font,colorchooser,filedialog,messagebox
 import os
 
 #Functionality part
+
+def statusBarFunction(event):
+    if textarea.edit_modified():
+        # len() gets length of whatever is in text area
+        words=len(textarea.get(0.0,END).split()) #stores a word as a string when a space is made
+        # 'end-1c' removes the last character which is a "new line" character
+        characters=len(textarea.get(0.0,'end-1c')) #finds the length which is just all characters
+        status_bar.config(text=f'Characters: {characters} Words: {words}')
+
+    textarea.edit_modified(False)
+
 url = ''
 def new_file():
     global url
@@ -49,21 +60,21 @@ def iexit():
     if textarea.edit_modified():
         result=messagebox.askyesnocancel('Warning', 'Do you want to save the file?')
         if result is True: #if yes
-            if url!='': # if new file
+            if url!='': # if not a new file
                 content=textarea.get(0.0,END)
                 file = open(url, 'w')
                 file.write(content)
                 root.destroy()
-            else:
+            else: #if a new file
                 content=textarea.get(0.0,END)
                 save_url = filedialog.asksaveasfile(mode='w', defaultextension='.txt', filetypes=(('Text File', 'txt'),
                                                                                                   ('All Files', '*.*')))
                 save_url.write(content)
                 save_url.close()
                 root.destroy()
-        elif result is False:
+        elif result is False: # if no
             root.destroy()
-        else:
+        else: #if cancel
             pass
     #if text area is not modified:
     else:
@@ -272,5 +283,6 @@ scrollbar.config(command=textarea.yview)
 status_bar=Label(root, text='Status Bar')
 status_bar.pack(side=BOTTOM)
 
+textarea.bind('<<Modified>>',statusBarFunction)
 
 root.mainloop()
