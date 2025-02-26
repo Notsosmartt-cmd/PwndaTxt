@@ -1,13 +1,35 @@
 from tkinter import *
 from tkinter.ttk import *
-from tkinter import font
-from tkinter import font,colorchooser
+from tkinter import font,colorchooser,filedialog
+import os
 
 #Functionality part
-
+url = ''
 def new_file():
     textarea.delete(0.0,END)
 
+def open_file():
+    global url
+    url=filedialog.askopenfilename(initialdir=os.getcwd(),title='Select File', filetypes=(('Text File','txt'), ('All Files','*.*')))
+    # This prints the content from data to console
+    # print(data.read())
+    if url != '':
+        textarea.delete(0.0, END)
+        data = open(url, 'r') # 'r' is read mode
+        textarea.insert(0.0,data.read())
+        root.title(os.path.basename(url))
+
+def save_file():
+    if url =='':
+        save_url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','txt'),
+                                                                                    ('All Files','*.*')))
+        content=textarea.get(0.0,END)
+        save_url.write(content)
+        save_url.close()
+    else:
+        content=textarea.get(0.0, END)
+        file = open(url, 'w')
+        file.write(content)
 
 fontSize=12
 fontStyle='Consolas'
@@ -88,10 +110,10 @@ newImage=PhotoImage(file='new.png')
 filemenu.add_command(label='New',accelerator='Ctrl+N',image=newImage,compound=LEFT,command=new_file)
 
 openImage=PhotoImage(file='open.png')
-filemenu.add_command(label='Open',accelerator='Ctrl+O',image=openImage,compound=LEFT)
+filemenu.add_command(label='Open',accelerator='Ctrl+O',image=openImage,compound=LEFT,command=open_file)
 
 saveImage=PhotoImage(file='save.png')
-filemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=LEFT)
+filemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=LEFT,command=save_file)
 
 save_asImage=PhotoImage(file='save_as.png')
 filemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT)
