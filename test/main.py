@@ -1,11 +1,13 @@
 from tkinter import *
 from tkinter.ttk import *
-from tkinter import font,colorchooser,filedialog
+from tkinter import font,colorchooser,filedialog,messagebox
 import os
 
 #Functionality part
 url = ''
 def new_file():
+    global url
+    url=''
     textarea.delete(0.0,END)
 
 def open_file():
@@ -30,6 +32,43 @@ def save_file():
         content=textarea.get(0.0, END)
         file = open(url, 'w')
         file.write(content)
+
+def saveas_file():
+    save_url = filedialog.asksaveasfile(mode='w', defaultextension='.txt', filetypes=(('Text File', 'txt'),
+                                                                                    ('All Files', '*.*')))
+
+    content = textarea.get(0.0, END)
+    save_url.write(content)
+    save_url.close()
+   #if the file is new then dont remove anything
+    if url != '':
+        os.remove(url)
+
+def iexit():
+    #checks if text area was modified
+    if textarea.edit_modified():
+        result=messagebox.askyesnocancel('Warning', 'Do you want to save the file?')
+        if result is True: #if yes
+            if url!='': # if new file
+                content=textarea.get(0.0,END)
+                file = open(url, 'w')
+                file.write(content)
+                root.destroy()
+            else:
+                content=textarea.get(0.0,END)
+                save_url = filedialog.asksaveasfile(mode='w', defaultextension='.txt', filetypes=(('Text File', 'txt'),
+                                                                                                  ('All Files', '*.*')))
+                save_url.write(content)
+                save_url.close()
+                root.destroy()
+        elif result is False:
+            root.destroy()
+        else:
+            pass
+    #if text area is not modified:
+    else:
+        root.destroy()
+
 
 fontSize=12
 fontStyle='Consolas'
@@ -116,12 +155,12 @@ saveImage=PhotoImage(file='save.png')
 filemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=LEFT,command=save_file)
 
 save_asImage=PhotoImage(file='save_as.png')
-filemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT)
+filemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT,command=saveas_file)
 
 filemenu.add_separator()
 
 exitImage=PhotoImage(file='exit.png')
-filemenu.add_command(label='Exit',accelerator='Ctrl+Q',image=exitImage,compound=LEFT)
+filemenu.add_command(label='Exit',accelerator='Ctrl+Q',image=exitImage,compound=LEFT,command=iexit)
 
 #Edit Menu
 editmenu=Menu(menubar,tearoff=False)
