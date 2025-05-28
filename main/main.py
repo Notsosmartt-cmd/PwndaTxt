@@ -4,6 +4,63 @@ from tkinter import font,colorchooser,filedialog,messagebox
 import os
 
 #Functionality part
+def find():
+
+    #functionality
+    def find_words():
+       start_pos='1.0'
+       word = findentryField.get()
+       if word: #used to check if a word exists so while loop doesn't break the app
+        while True:
+           start_pos = textarea.search(word,start_pos,stopindex=END)
+           if not start_pos:
+               break
+           end_pos=f'{start_pos}+{len(word)}c'
+           textarea.tag_add('match',start_pos,end_pos)
+
+           textarea.tag_config('match', foreground='red', background='yellow')
+           start_pos=end_pos
+
+    def find_words():
+        word = findentryField.get()
+        replaceword=replaceentryField.get()
+        content=textarea.get(1.0,END)
+        content.replace(word,replaceword)
+
+
+    #GUI
+    root1=Toplevel()
+
+    root1.title('Find')
+    root1.geometry('450x250+500+200')
+    root1.resizable(0,0)
+
+    labelFrame=LabelFrame(root1,text='Find/Replace')
+    labelFrame.pack(pady=50)
+
+    #find
+    findLabel=Label(labelFrame,text='Find')
+    findLabel.grid(row=0,column=0,padx=5,pady=5)
+    findentryField=Entry(labelFrame)
+    findentryField.grid(row=0,column=1,padx=5,pady=5)
+
+    findButton = Button(labelFrame, text='FIND', command=find_words)
+    findButton.grid(row=2, column=0, padx=5, pady=5)
+
+    #replace
+    replaceLabel = Label(labelFrame, text='Find')
+    replaceLabel.grid(row=1, column=0, padx=5, pady=5)
+    replaceentryField = Entry(labelFrame)
+    replaceentryField.grid(row=1, column=1, padx=5, pady=5)
+
+    replaceButton = Button(labelFrame, text='REPLACE', command=find_words)
+    replaceButton.grid(row=2, column=1, padx=5, pady=5)
+
+    findLabel=Label(labelFrame,text='Replace')
+    findLabel.grid(row=0,column=0)
+
+    root1.mainloop()
+
 
 def statusBarFunction(event):
     if textarea.edit_modified():
@@ -150,84 +207,36 @@ root.resizable(False,False)
 menubar=Menu(root)
 root.config(menu=menubar)
 
-#tearoff causes dialogs or commands like save to detach from main frame
+#tearoff causes dialogs or commands like save to detach from photos frame
 
 #File Menu
 filemenu=Menu(menubar, tearoff=False)
 menubar.add_cascade(label = 'File', menu=filemenu)
 
-newImage=PhotoImage(file='new.png')
+newImage=PhotoImage(file='../photos/new.png')
 filemenu.add_command(label='New',accelerator='Ctrl+N',image=newImage,compound=LEFT,command=new_file)
 
-openImage=PhotoImage(file='open.png')
+openImage=PhotoImage(file='../photos/open.png')
 filemenu.add_command(label='Open',accelerator='Ctrl+O',image=openImage,compound=LEFT,command=open_file)
 
-saveImage=PhotoImage(file='save.png')
+saveImage=PhotoImage(file='../photos/save.png')
 filemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=LEFT,command=save_file)
 
-save_asImage=PhotoImage(file='save_as.png')
+save_asImage=PhotoImage(file='../photos/save_as.png')
 filemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT,command=saveas_file)
 
 filemenu.add_separator()
 
-exitImage=PhotoImage(file='exit.png')
+exitImage=PhotoImage(file='../photos/exit.png')
 filemenu.add_command(label='Exit',accelerator='Ctrl+Q',image=exitImage,compound=LEFT,command=iexit)
 
-#Edit Menu
-editmenu=Menu(menubar,tearoff=False)
-
-cutImage=PhotoImage(file='cut.png')
-editmenu.add_command(label='Cut', accelerator='Ctrl+X',image=cutImage,compound=LEFT)
-
-copyImage=PhotoImage(file='copy.png')
-editmenu.add_command(label='Copy', accelerator='Ctrl+C',image=copyImage,compound=LEFT)
-
-pasteImage=PhotoImage(file='paste.png')
-editmenu.add_command(label='Paste', accelerator='Ctrl+V',image=pasteImage,compound=LEFT)
-
-clearImage=PhotoImage(file='clear_all.png')
-editmenu.add_command(label='Clear', accelerator='Ctrl+Alt+X',image=clearImage,compound=LEFT)
-
-findImage=PhotoImage(file='find.png')
-editmenu.add_command(label='Find', accelerator='Ctrl+F',image=findImage,compound=LEFT)
-
-menubar.add_cascade(label = 'Edit', menu=editmenu)
-
-#View Menu
-show_toolbar = BooleanVar()
-show_statusbar = BooleanVar()
-statusImage=PhotoImage(file='status_bar.png')
-toolbarImage=PhotoImage(file='tool_bar.png')
-
-viewmenu=Menu(menubar, tearoff=False)
-viewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT)
-viewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT)
-
-menubar.add_cascade(label='View', menu=viewmenu)
-
-#Themes menu
-themesmenu=Menu(menubar,tearoff=False)
-menubar.add_cascade(label = 'Themes', menu=themesmenu)
-theme_choice=StringVar()
-
-lightImage=PhotoImage(file='light_default.png')
-themesmenu.add_radiobutton(label='LightDefault',image=lightImage,variable=theme_choice,compound=LEFT)
-
-darkImage=PhotoImage(file='dark.png')
-themesmenu.add_radiobutton(label='dark',image=darkImage,variable=theme_choice,compound=LEFT)
-
-pinkImage=PhotoImage(file='red.png')
-themesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,compound=LEFT)
-
-monokaiImage=PhotoImage(file='monokai.png')
-themesmenu.add_radiobutton(label='monokai',image=monokaiImage,variable=theme_choice,compound=LEFT)
 
 #toolbar section
-
 tool_bar = Label(root)
 tool_bar.pack(side=TOP, fill=X)
 font_families=font.families()
 font_family_variable=StringVar()
+
 #Fonts
 fontfamily_Combobox=Combobox(tool_bar, width=30, values=font_families, state='readonly',textvariable=font_family_variable)
 fontfamily_Combobox.current(font_families.index('Consolas')) #Default font
@@ -243,33 +252,32 @@ font_size_Combobox.bind('<<ComboboxSelected>>', font_size)
 
 
 #buttons section
-
-boldImage=PhotoImage(file= 'bold.png')
+boldImage=PhotoImage(file='../photos/bold.png')
 boldButton=Button(tool_bar, image=boldImage,command=bold_text)
 boldButton.grid(row=0,column=2,padx=5)
 
 
-italicImage=PhotoImage(file= 'italic.png')
+italicImage=PhotoImage(file='../photos/italic.png')
 italicButton=Button(tool_bar, image=italicImage,command=italic_text)
 italicButton.grid(row=0,column=3,padx=5)
 
-underlineImage=PhotoImage(file= 'underline.png')
+underlineImage=PhotoImage(file='../photos/underline.png')
 underlineButton=Button(tool_bar, image=underlineImage,command=underline_text)
 underlineButton.grid(row=0,column=4,padx=5)
 
-fontColorImage=PhotoImage(file= 'font_color.png')
+fontColorImage=PhotoImage(file='../photos/font_color.png')
 fontColorButton=Button(tool_bar, image=fontColorImage, command=color_select)
 fontColorButton.grid(row=0,column=5,padx=5)
 
-leftAlignImage=PhotoImage(file= 'left.png')
+leftAlignImage=PhotoImage(file='../photos/left.png')
 leftAlignButton=Button(tool_bar, image=leftAlignImage, command=align_left)
 leftAlignButton.grid(row=0,column=6,padx=5)
 
-centerAlignImage=PhotoImage(file= 'center.png')
+centerAlignImage=PhotoImage(file='../photos/center.png')
 centerAlignButton=Button(tool_bar, image=centerAlignImage, command=align_center)
 centerAlignButton.grid(row=0,column=7,padx=5)
 
-rightAlignImage=PhotoImage(file= 'right.png')
+rightAlignImage=PhotoImage(file='../photos/right.png')
 rightAlignButton=Button(tool_bar, image=rightAlignImage, command=align_right)
 rightAlignButton.grid(row=0,column=8,padx=5)
 
@@ -284,5 +292,57 @@ status_bar=Label(root, text='Status Bar')
 status_bar.pack(side=BOTTOM)
 
 textarea.bind('<<Modified>>',statusBarFunction)
+
+
+#Edit Menu
+editmenu=Menu(menubar,tearoff=False)
+
+cutImage=PhotoImage(file='../photos/cut.png')
+editmenu.add_command(label='Cut', accelerator='Ctrl+X',image=cutImage,compound=LEFT,command=lambda :textarea.event_generate('<Control x>'))
+
+copyImage=PhotoImage(file='../photos/copy.png')
+editmenu.add_command(label='Copy', accelerator='Ctrl+C',image=copyImage,compound=LEFT,command=lambda :textarea.event_generate('<Control c>'))
+
+pasteImage=PhotoImage(file='../photos/paste.png')
+editmenu.add_command(label='Paste', accelerator='Ctrl+V',image=pasteImage,compound=LEFT,command=lambda :textarea.event_generate('<Control v>'))
+
+clearImage=PhotoImage(file='../photos/clear_all.png')
+editmenu.add_command(label='Clear', accelerator='Ctrl+Alt+X',image=clearImage,compound=LEFT,command=lambda :textarea.delete(0.0,END))
+
+findImage=PhotoImage(file='../photos/find.png')
+editmenu.add_command(label='Find', accelerator='Ctrl+F',image=findImage,compound=LEFT,command=find)
+
+menubar.add_cascade(label = 'Edit', menu=editmenu)
+
+
+#View Menu
+show_toolbar = BooleanVar()
+show_statusbar = BooleanVar()
+statusImage=PhotoImage(file='../photos/status_bar.png')
+toolbarImage=PhotoImage(file='../photos/tool_bar.png')
+
+viewmenu=Menu(menubar, tearoff=False)
+viewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT)
+viewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT)
+
+menubar.add_cascade(label='View', menu=viewmenu)
+
+#Themes menu
+themesmenu=Menu(menubar,tearoff=False)
+menubar.add_cascade(label = 'Themes', menu=themesmenu)
+theme_choice=StringVar()
+
+lightImage=PhotoImage(file='../photos/light_default.png')
+themesmenu.add_radiobutton(label='LightDefault',image=lightImage,variable=theme_choice,compound=LEFT)
+
+darkImage=PhotoImage(file='../photos/dark.png')
+themesmenu.add_radiobutton(label='dark',image=darkImage,variable=theme_choice,compound=LEFT)
+
+pinkImage=PhotoImage(file='../photos/red.png')
+themesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,compound=LEFT)
+
+monokaiImage=PhotoImage(file='../photos/monokai.png')
+themesmenu.add_radiobutton(label='monokai',image=monokaiImage,variable=theme_choice,compound=LEFT)
+
 
 root.mainloop()
