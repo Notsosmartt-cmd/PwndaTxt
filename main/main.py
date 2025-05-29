@@ -3,12 +3,37 @@ from tkinter.ttk import *
 from tkinter import font,colorchooser,filedialog,messagebox
 import os
 
+
 #Functionality part
+
+def change_theme(bg_color,fg_color):
+    textarea.config(bg=bg_color,fg=fg_color)
+
+def toolbarFunc():
+    if show_toolbar.get() == False:
+        tool_bar.pack_forget()
+    if show_toolbar.get() == True:
+       #tool bar gets packed on buttom so we have to unpack and pack text area so it can be on top again
+        textarea.pack_forget()
+        tool_bar.pack(fill=X)
+        textarea.pack(fill=BOTH,expand=1)
+
+
+def statusbarFunc():
+    if show_statusbar.get()==False:
+        status_bar.pack_forget()
+    else:
+        status_bar.pack()
+
+    bruh = 2
+
 def find():
 
     #functionality
     def find_words():
-       start_pos='1.0'
+
+       textarea.tag_remove('match', 1.0, END)
+       start_pos = '1.0'
        word = findentryField.get()
        if word: #used to check if a word exists so while loop doesn't break the app
         while True:
@@ -21,12 +46,13 @@ def find():
            textarea.tag_config('match', foreground='red', background='yellow')
            start_pos=end_pos
 
-    def find_words():
+    def replace_text():
         word = findentryField.get()
         replaceword=replaceentryField.get()
         content=textarea.get(1.0,END)
-        content.replace(word,replaceword)
-
+        new_content = content.replace(word,replaceword)
+        textarea.delete(1.0,END)
+        textarea.insert(1.0,new_content)
 
     #GUI
     root1=Toplevel()
@@ -48,16 +74,21 @@ def find():
     findButton.grid(row=2, column=0, padx=5, pady=5)
 
     #replace
-    replaceLabel = Label(labelFrame, text='Find')
+    replaceLabel = Label(labelFrame, text='Replace')
     replaceLabel.grid(row=1, column=0, padx=5, pady=5)
     replaceentryField = Entry(labelFrame)
     replaceentryField.grid(row=1, column=1, padx=5, pady=5)
 
-    replaceButton = Button(labelFrame, text='REPLACE', command=find_words)
+    replaceButton = Button(labelFrame, text='REPLACE', command=replace_text)
     replaceButton.grid(row=2, column=1, padx=5, pady=5)
 
-    findLabel=Label(labelFrame,text='Replace')
-    findLabel.grid(row=0,column=0)
+    #removes highlight once find is closed
+    def doSomething():
+        textarea.tag_remove('match',1.0, END)
+        root1.destroy()
+
+    root1.protocol('WM_DELETE_WINDOW',doSomething)
+
 
     root1.mainloop()
 
@@ -322,9 +353,10 @@ statusImage=PhotoImage(file='../photos/status_bar.png')
 toolbarImage=PhotoImage(file='../photos/tool_bar.png')
 
 viewmenu=Menu(menubar, tearoff=False)
-viewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT)
-viewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT)
-
+viewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT,command=toolbarFunc)
+show_toolbar.set(True)
+viewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT,command=statusbarFunc)
+show_statusbar.set(True)
 menubar.add_cascade(label='View', menu=viewmenu)
 
 #Themes menu
@@ -333,16 +365,20 @@ menubar.add_cascade(label = 'Themes', menu=themesmenu)
 theme_choice=StringVar()
 
 lightImage=PhotoImage(file='../photos/light_default.png')
-themesmenu.add_radiobutton(label='LightDefault',image=lightImage,variable=theme_choice,compound=LEFT)
+themesmenu.add_radiobutton(label='LightDefault',image=lightImage,variable=theme_choice,compound=LEFT
+                           ,command=lambda :change_theme('white','black'))
 
 darkImage=PhotoImage(file='../photos/dark.png')
-themesmenu.add_radiobutton(label='dark',image=darkImage,variable=theme_choice,compound=LEFT)
+themesmenu.add_radiobutton(label='dark',image=darkImage,variable=theme_choice,compound=LEFT
+                           ,command=lambda :change_theme('gray20','white'))
 
 pinkImage=PhotoImage(file='../photos/red.png')
-themesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,compound=LEFT)
+themesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,compound=LEFT
+                           ,command=lambda :change_theme('pink','blue'))
 
 monokaiImage=PhotoImage(file='../photos/monokai.png')
-themesmenu.add_radiobutton(label='monokai',image=monokaiImage,variable=theme_choice,compound=LEFT)
+themesmenu.add_radiobutton(label='monokai',image=monokaiImage,variable=theme_choice,compound=LEFT
+                           ,command=lambda :change_theme('orange','white'))
 
 
 root.mainloop()
