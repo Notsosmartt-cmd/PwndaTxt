@@ -2,9 +2,20 @@ from tkinter import *
 from tkinter.ttk import *
 from tkinter import font,colorchooser,filedialog,messagebox
 import os
-
+import tempfile
+from datetime import datetime
 
 #Functionality part
+
+def date_time(event=None):
+    currentdatetime = datetime.now()
+    formateddatetime=currentdatetime.strftime('%d/%m/%Y %H:%M:%S')
+    textarea.insert(1.0,formateddatetime)
+
+def printout(event=None):
+    file=tempfile.mktemp('.txt')
+    open(file,'w').write(textarea.get(1.0,END))
+    os.startfile(file,'print')
 
 def change_theme(bg_color,fg_color):
     textarea.config(bg=bg_color,fg=fg_color)
@@ -13,7 +24,7 @@ def toolbarFunc():
     if show_toolbar.get() == False:
         tool_bar.pack_forget()
     if show_toolbar.get() == True:
-       #tool bar gets packed on buttom so we have to unpack and pack text area so it can be on top again
+       #toolbar gets packed on button so we have to unpack and pack text area so it can be on top again
         textarea.pack_forget()
         tool_bar.pack(fill=X)
         textarea.pack(fill=BOTH,expand=1)
@@ -104,12 +115,12 @@ def statusBarFunction(event):
     textarea.edit_modified(False)
 
 url = ''
-def new_file():
+def new_file(event=None):
     global url
     url=''
     textarea.delete(0.0,END)
 
-def open_file():
+def open_file(event=None):
     global url
     url=filedialog.askopenfilename(initialdir=os.getcwd(),title='Select File', filetypes=(('Text File','txt'), ('All Files','*.*')))
     # This prints the content from data to console
@@ -120,19 +131,22 @@ def open_file():
         textarea.insert(0.0,data.read())
         root.title(os.path.basename(url))
 
-def save_file():
+def save_file(event=None):
     if url =='':
-        save_url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','txt'),
-                                                                                    ('All Files','*.*')))
-        content=textarea.get(0.0,END)
-        save_url.write(content)
-        save_url.close()
+        save_url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','txt'),('All Files','*.*')))
+
+        if save_url is None:
+            pass
+        else:
+            content=textarea.get(0.0,END)
+            save_url.write(content)
+            save_url.close()
     else:
         content=textarea.get(0.0, END)
         file = open(url, 'w')
         file.write(content)
 
-def saveas_file():
+def saveas_file(event=None):
     save_url = filedialog.asksaveasfile(mode='w', defaultextension='.txt', filetypes=(('Text File', 'txt'),
                                                                                     ('All Files', '*.*')))
 
@@ -143,7 +157,7 @@ def saveas_file():
     if url != '':
         os.remove(url)
 
-def iexit():
+def iexit(event=None):
     #checks if text area was modified
     if textarea.edit_modified():
         result=messagebox.askyesnocancel('Warning', 'Do you want to save the file?')
@@ -256,6 +270,10 @@ filemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=
 save_asImage=PhotoImage(file='../photos/save_as.png')
 filemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT,command=saveas_file)
 
+#print
+printImage=PhotoImage(file='../photos/print.png')
+filemenu.add_command(label='Print',accelerator='Ctrl+P',image=printImage,compound=LEFT,command=printout)
+
 filemenu.add_separator()
 
 exitImage=PhotoImage(file='../photos/exit.png')
@@ -315,7 +333,7 @@ rightAlignButton.grid(row=0,column=8,padx=5)
 scrollbar=Scrollbar(root)
 scrollbar.pack(side=RIGHT, fill=Y)
 
-textarea=Text(root, yscrollcommand=scrollbar.set, font=('Consolas',12))
+textarea=Text(root, yscrollcommand=scrollbar.set, font=('Consolas',12), undo=True)
 textarea.pack(fill=BOTH,expand=True)
 scrollbar.config(command=textarea.yview)
 
@@ -331,17 +349,28 @@ editmenu=Menu(menubar,tearoff=False)
 cutImage=PhotoImage(file='../photos/cut.png')
 editmenu.add_command(label='Cut', accelerator='Ctrl+X',image=cutImage,compound=LEFT,command=lambda :textarea.event_generate('<Control x>'))
 
+undoImage=PhotoImage(file='../photos/undo.png')
+editmenu.add_command(label='Undo', accelerator='Ctrl+Z',image=undoImage,compound=LEFT)
+
 copyImage=PhotoImage(file='../photos/copy.png')
 editmenu.add_command(label='Copy', accelerator='Ctrl+C',image=copyImage,compound=LEFT,command=lambda :textarea.event_generate('<Control c>'))
 
 pasteImage=PhotoImage(file='../photos/paste.png')
 editmenu.add_command(label='Paste', accelerator='Ctrl+V',image=pasteImage,compound=LEFT,command=lambda :textarea.event_generate('<Control v>'))
 
+selectImage=PhotoImage(file='../photos/checked.png')
+editmenu.add_command(label='Select All', accelerator='Ctrl+A',image=selectImage,compound=LEFT,command=lambda :textarea.event_generate('<Control a>'))
+
 clearImage=PhotoImage(file='../photos/clear_all.png')
 editmenu.add_command(label='Clear', accelerator='Ctrl+Alt+X',image=clearImage,compound=LEFT,command=lambda :textarea.delete(0.0,END))
 
 findImage=PhotoImage(file='../photos/find.png')
 editmenu.add_command(label='Find', accelerator='Ctrl+F',image=findImage,compound=LEFT,command=find)
+
+datetimeImage=PhotoImage(file='../photos/calender.png')
+editmenu.add_command(label='Time/Date', accelerator='Ctrl+D',image=datetimeImage,compound=LEFT,command=date_time)
+
+
 
 menubar.add_cascade(label = 'Edit', menu=editmenu)
 
@@ -379,6 +408,13 @@ themesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,com
 monokaiImage=PhotoImage(file='../photos/monokai.png')
 themesmenu.add_radiobutton(label='monokai',image=monokaiImage,variable=theme_choice,compound=LEFT
                            ,command=lambda :change_theme('orange','white'))
-
+#keybinds
+root.bind("<Control-o>",open_file)
+root.bind("<Control-n>",new_file)
+root.bind("<Control-s>",save_file)
+root.bind("<Control-Alt-s>",saveas_file)
+root.bind("<Control-q>",iexit)
+root.bind("<Control-p>",printout)
+root.bind("<Control-d>",date_time)
 
 root.mainloop()
