@@ -258,25 +258,25 @@ root.config(menu=menubar)
 filemenu=Menu(menubar, tearoff=False)
 menubar.add_cascade(label = 'File', menu=filemenu)
 
-newImage=PhotoImage(file='../photos/new.png')
+newImage=PhotoImage(file='../../photos/new.png')
 filemenu.add_command(label='New',accelerator='Ctrl+N',image=newImage,compound=LEFT,command=new_file)
 
-openImage=PhotoImage(file='../photos/open.png')
+openImage=PhotoImage(file='../../photos/open.png')
 filemenu.add_command(label='Open',accelerator='Ctrl+O',image=openImage,compound=LEFT,command=open_file)
 
-saveImage=PhotoImage(file='../photos/save.png')
+saveImage=PhotoImage(file='../../photos/save.png')
 filemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=LEFT,command=save_file)
 
-save_asImage=PhotoImage(file='../photos/save_as.png')
+save_asImage=PhotoImage(file='../../photos/save_as.png')
 filemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT,command=saveas_file)
 
 #print
-printImage=PhotoImage(file='../photos/print.png')
+printImage=PhotoImage(file='../../photos/print.png')
 filemenu.add_command(label='Print',accelerator='Ctrl+P',image=printImage,compound=LEFT,command=printout)
 
 filemenu.add_separator()
 
-exitImage=PhotoImage(file='../photos/exit.png')
+exitImage=PhotoImage(file='../../photos/exit.png')
 filemenu.add_command(label='Exit',accelerator='Ctrl+Q',image=exitImage,compound=LEFT,command=iexit)
 
 
@@ -301,32 +301,32 @@ font_size_Combobox.bind('<<ComboboxSelected>>', font_size)
 
 
 #buttons section
-boldImage=PhotoImage(file='../photos/bold.png')
+boldImage=PhotoImage(file='../../photos/bold.png')
 boldButton=Button(tool_bar, image=boldImage,command=bold_text)
 boldButton.grid(row=0,column=2,padx=5)
 
 
-italicImage=PhotoImage(file='../photos/italic.png')
+italicImage=PhotoImage(file='../../photos/italic.png')
 italicButton=Button(tool_bar, image=italicImage,command=italic_text)
 italicButton.grid(row=0,column=3,padx=5)
 
-underlineImage=PhotoImage(file='../photos/underline.png')
+underlineImage=PhotoImage(file='../../photos/underline.png')
 underlineButton=Button(tool_bar, image=underlineImage,command=underline_text)
 underlineButton.grid(row=0,column=4,padx=5)
 
-fontColorImage=PhotoImage(file='../photos/font_color.png')
+fontColorImage=PhotoImage(file='../../photos/font_color.png')
 fontColorButton=Button(tool_bar, image=fontColorImage, command=color_select)
 fontColorButton.grid(row=0,column=5,padx=5)
 
-leftAlignImage=PhotoImage(file='../photos/left.png')
+leftAlignImage=PhotoImage(file='../../photos/left.png')
 leftAlignButton=Button(tool_bar, image=leftAlignImage, command=align_left)
 leftAlignButton.grid(row=0,column=6,padx=5)
 
-centerAlignImage=PhotoImage(file='../photos/center.png')
+centerAlignImage=PhotoImage(file='../../photos/center.png')
 centerAlignButton=Button(tool_bar, image=centerAlignImage, command=align_center)
 centerAlignButton.grid(row=0,column=7,padx=5)
 
-rightAlignImage=PhotoImage(file='../photos/right.png')
+rightAlignImage=PhotoImage(file='../../photos/right.png')
 rightAlignButton=Button(tool_bar, image=rightAlignImage, command=align_right)
 rightAlignButton.grid(row=0,column=8,padx=5)
 
@@ -346,28 +346,28 @@ textarea.bind('<<Modified>>',statusBarFunction)
 #Edit Menu
 editmenu=Menu(menubar,tearoff=False)
 
-cutImage=PhotoImage(file='../photos/cut.png')
+cutImage=PhotoImage(file='../../photos/cut.png')
 editmenu.add_command(label='Cut', accelerator='Ctrl+X',image=cutImage,compound=LEFT,command=lambda :textarea.event_generate('<Control x>'))
 
-undoImage=PhotoImage(file='../photos/undo.png')
+undoImage=PhotoImage(file='../../photos/undo.png')
 editmenu.add_command(label='Undo', accelerator='Ctrl+Z',image=undoImage,compound=LEFT)
 
-copyImage=PhotoImage(file='../photos/copy.png')
+copyImage=PhotoImage(file='../../photos/copy.png')
 editmenu.add_command(label='Copy', accelerator='Ctrl+C',image=copyImage,compound=LEFT,command=lambda :textarea.event_generate('<Control c>'))
 
-pasteImage=PhotoImage(file='../photos/paste.png')
+pasteImage=PhotoImage(file='../../photos/paste.png')
 editmenu.add_command(label='Paste', accelerator='Ctrl+V',image=pasteImage,compound=LEFT,command=lambda :textarea.event_generate('<Control v>'))
 
-selectImage=PhotoImage(file='../photos/checked.png')
+selectImage=PhotoImage(file='../../photos/checked.png')
 editmenu.add_command(label='Select All', accelerator='Ctrl+A',image=selectImage,compound=LEFT,command=lambda :textarea.event_generate('<Control a>'))
 
-clearImage=PhotoImage(file='../photos/clear_all.png')
+clearImage=PhotoImage(file='../../photos/clear_all.png')
 editmenu.add_command(label='Clear', accelerator='Ctrl+Alt+X',image=clearImage,compound=LEFT,command=lambda :textarea.delete(0.0,END))
 
-findImage=PhotoImage(file='../photos/find.png')
+findImage=PhotoImage(file='../../photos/find.png')
 editmenu.add_command(label='Find', accelerator='Ctrl+F',image=findImage,compound=LEFT,command=find)
 
-datetimeImage=PhotoImage(file='../photos/calender.png')
+datetimeImage=PhotoImage(file='../../photos/calender.png')
 editmenu.add_command(label='Time/Date', accelerator='Ctrl+D',image=datetimeImage,compound=LEFT,command=date_time)
 
 
@@ -378,8 +378,8 @@ menubar.add_cascade(label = 'Edit', menu=editmenu)
 #View Menu
 show_toolbar = BooleanVar()
 show_statusbar = BooleanVar()
-statusImage=PhotoImage(file='../photos/status_bar.png')
-toolbarImage=PhotoImage(file='../photos/tool_bar.png')
+statusImage=PhotoImage(file='../../photos/status_bar.png')
+toolbarImage=PhotoImage(file='../../photos/tool_bar.png')
 
 viewmenu=Menu(menubar, tearoff=False)
 viewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT,command=toolbarFunc)
@@ -393,19 +393,19 @@ themesmenu=Menu(menubar,tearoff=False)
 menubar.add_cascade(label = 'Themes', menu=themesmenu)
 theme_choice=StringVar()
 
-lightImage=PhotoImage(file='../photos/light_default.png')
+lightImage=PhotoImage(file='../../photos/light_default.png')
 themesmenu.add_radiobutton(label='LightDefault',image=lightImage,variable=theme_choice,compound=LEFT
                            ,command=lambda :change_theme('white','black'))
 
-darkImage=PhotoImage(file='../photos/dark.png')
+darkImage=PhotoImage(file='../../photos/dark.png')
 themesmenu.add_radiobutton(label='dark',image=darkImage,variable=theme_choice,compound=LEFT
                            ,command=lambda :change_theme('gray20','white'))
 
-pinkImage=PhotoImage(file='../photos/red.png')
+pinkImage=PhotoImage(file='../../photos/red.png')
 themesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,compound=LEFT
                            ,command=lambda :change_theme('pink','blue'))
 
-monokaiImage=PhotoImage(file='../photos/monokai.png')
+monokaiImage=PhotoImage(file='../../photos/monokai.png')
 themesmenu.add_radiobutton(label='monokai',image=monokaiImage,variable=theme_choice,compound=LEFT
                            ,command=lambda :change_theme('orange','white'))
 #keybinds

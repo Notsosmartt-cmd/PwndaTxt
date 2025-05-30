@@ -1,3 +1,5 @@
+import subprocess
+import sys
 import tempfile
 import tkinter as tk
 from tkinter import filedialog, messagebox
@@ -5,7 +7,7 @@ import os
 import zipfile
 import shutil
 
-from zPwndaLitePython.FileProcessor1 import FileProcessor
+from zPwndaLitePython.FileProcessor import FileProcessor
 
 
 class LiteApp:
@@ -54,6 +56,32 @@ class LiteApp:
         self.input_path = None
         self.is_directory = False
         self.password_file_path = None
+        # Home button
+        self.home_btn = tk.Button(root, text="🏠 Home", command=self.go_to_home)
+        # adjust x/y to wherever you want it in the window
+        self.home_btn.place(x=400, y=180)
+
+    def go_to_home(self):
+        """Close LiteApp and launch the main homepage script."""
+        try:
+            # two levels up from this file to the project root
+            current_file = os.path.abspath(__file__)
+            project_root = os.path.dirname(os.path.dirname(current_file))
+            homepage_path = os.path.join(project_root, "HomePage.py")  # adjust filename as needed
+
+            if not os.path.exists(homepage_path):
+                messagebox.showerror("Error", f"Cannot find homepage at:\n{homepage_path}")
+                return
+
+            # destroy this window
+            self.root.destroy()
+
+            # launch homepage with the same python interpreter
+            subprocess.Popen([sys.executable, homepage_path])
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to return home: {e}")
+
 
     def toggle_password_source(self):
         if self.password_source.get() == "manual":
@@ -151,3 +179,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = LiteApp(root)
     root.mainloop()
+
