@@ -1,6 +1,6 @@
 import argparse
-from Utf8Utils import Utf8Utils
-from Decryptor import Decryptor
+from utlities.Utf8Utils import Utf8Utils
+from processors.FileDecryptor import Decryptor
 
 # Test configuration
 DEFAULT_INPUT = "test_output.txt"

@@ -102,7 +102,9 @@ class HomePage:
     def launch_encryption(self):
         try:
             base_dir        = os.path.dirname(os.path.abspath(__file__))
-            encryptor_path  = os.path.join(base_dir, "zPwndaLitePython", "PwndaLite.py")
+
+
+            encryptor_path  = os.path.join(base_dir, "PwndaLitePython", "PwndaLite.py")
 
             if not os.path.exists(encryptor_path):
                 messagebox.showerror(

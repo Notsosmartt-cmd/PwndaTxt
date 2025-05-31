@@ -1,10 +1,10 @@
 import argparse
-from Utf8Utils import Utf8Utils
-from processors.FileDecryptor import Decryptor
+from utlities.Utf8Utils import Utf8Utils
+from processors.FileEncryptor import FileProcessor
 
 # Test configuration
-DEFAULT_INPUT = "test_output.txt"
-DEFAULT_OUTPUT = "test_output(D).txt"
+DEFAULT_INPUT = "test.txt"
+DEFAULT_OUTPUT = "test_output.txt"
 DEFAULT_PASSWORD = "my_test_password"
 
 
@@ -21,8 +21,8 @@ def main():
     if not password_codepoints:
         raise ValueError("Password cannot be empty")
 
-    decryptor = Decryptor(password_codepoints)
-    decryptor.process_file(args.input, args.output)
+    processor = FileProcessor(password_codepoints)
+    processor.process_file(args.input, args.output)
 
 
 if __name__ == "__main__":

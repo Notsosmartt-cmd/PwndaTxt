@@ -7,7 +7,7 @@ import os
 import zipfile
 import shutil
 
-from zPwndaLitePython.FileProcessor import FileProcessor
+from PwndaLitePython.FileProcessor import FileProcessor
 
 
 class LiteApp:
