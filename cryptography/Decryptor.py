@@ -5,7 +5,7 @@ from processors.FileDecryptor import Decryptor
 # Test configuration
 DEFAULT_INPUT = "test_output.txt"
 DEFAULT_OUTPUT = "test_output(D).txt"
-DEFAULT_PASSWORD = "my_test_password"
+DEFAULT_PASSWORD = "123"
 
 
 def main():

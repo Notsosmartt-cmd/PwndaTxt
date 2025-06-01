@@ -5,7 +5,7 @@ from processors.FileEncryptor import FileProcessor
 # Test configuration
 DEFAULT_INPUT = "test.txt"
 DEFAULT_OUTPUT = "test_output.txt"
-DEFAULT_PASSWORD = "my_test_password"
+DEFAULT_PASSWORD = "123"
 
 
 def main():
