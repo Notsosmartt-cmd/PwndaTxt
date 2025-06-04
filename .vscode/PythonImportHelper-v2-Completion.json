@@ -1,0 +1,972 @@
+[
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "Utf8Utils",
+        "importPath": "utlities.Utf8Utils",
+        "description": "utlities.Utf8Utils",
+        "isExtraImport": true,
+        "detail": "utlities.Utf8Utils",
+        "documentation": {}
+    },
+    {
+        "label": "Utf8Utils",
+        "importPath": "utlities.Utf8Utils",
+        "description": "utlities.Utf8Utils",
+        "isExtraImport": true,
+        "detail": "utlities.Utf8Utils",
+        "documentation": {}
+    },
+    {
+        "label": "Utf8Utils",
+        "importPath": "utlities.Utf8Utils",
+        "description": "utlities.Utf8Utils",
+        "isExtraImport": true,
+        "detail": "utlities.Utf8Utils",
+        "documentation": {}
+    },
+    {
+        "label": "Utf8Utils",
+        "importPath": "utlities.Utf8Utils",
+        "description": "utlities.Utf8Utils",
+        "isExtraImport": true,
+        "detail": "utlities.Utf8Utils",
+        "documentation": {}
+    },
+    {
+        "label": "Decryptor",
+        "importPath": "processors.FileDecryptor",
+        "description": "processors.FileDecryptor",
+        "isExtraImport": true,
+        "detail": "processors.FileDecryptor",
+        "documentation": {}
+    },
+    {
+        "label": "Decryptor",
+        "importPath": "processors.FileDecryptor",
+        "description": "processors.FileDecryptor",
+        "isExtraImport": true,
+        "detail": "processors.FileDecryptor",
+        "documentation": {}
+    },
+    {
+        "label": "Decryptor",
+        "importPath": "processors.FileDecryptor",
+        "description": "processors.FileDecryptor",
+        "isExtraImport": true,
+        "detail": "processors.FileDecryptor",
+        "documentation": {}
+    },
+    {
+        "label": "FileProcessor",
+        "importPath": "processors.FileEncryptor",
+        "description": "processors.FileEncryptor",
+        "isExtraImport": true,
+        "detail": "processors.FileEncryptor",
+        "documentation": {}
+    },
+    {
+        "label": "FileProcessor",
+        "importPath": "processors.FileEncryptor",
+        "description": "processors.FileEncryptor",
+        "isExtraImport": true,
+        "detail": "processors.FileEncryptor",
+        "documentation": {}
+    },
+    {
+        "label": "FileProcessor",
+        "importPath": "processors.FileEncryptor",
+        "description": "processors.FileEncryptor",
+        "isExtraImport": true,
+        "detail": "processors.FileEncryptor",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "RandomSelector",
+        "importPath": "utlities.RandomSelector",
+        "description": "utlities.RandomSelector",
+        "isExtraImport": true,
+        "detail": "utlities.RandomSelector",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "colorchooser",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "colorchooser",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Menu",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "colorchooser",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "zipfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter.ttk",
+        "description": "tkinter.ttk",
+        "isExtraImport": true,
+        "detail": "tkinter.ttk",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter.ttk",
+        "description": "tkinter.ttk",
+        "isExtraImport": true,
+        "detail": "tkinter.ttk",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "TextEditor",
+        "importPath": "modules.gui",
+        "description": "modules.gui",
+        "isExtraImport": true,
+        "detail": "modules.gui",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "cryptography.Decryptor",
+        "description": "cryptography.Decryptor",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)\n    if not password_codepoints:\n        raise ValueError(\"Password cannot be empty\")\n    decryptor = Decryptor(password_codepoints)",
+        "detail": "cryptography.Decryptor",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_INPUT",
+        "kind": 5,
+        "importPath": "cryptography.Decryptor",
+        "description": "cryptography.Decryptor",
+        "peekOfCode": "DEFAULT_INPUT = \"test_output.txt\"\nDEFAULT_OUTPUT = \"test_output(D).txt\"\nDEFAULT_PASSWORD = \"123\"\ndef main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)",
+        "detail": "cryptography.Decryptor",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_OUTPUT",
+        "kind": 5,
+        "importPath": "cryptography.Decryptor",
+        "description": "cryptography.Decryptor",
+        "peekOfCode": "DEFAULT_OUTPUT = \"test_output(D).txt\"\nDEFAULT_PASSWORD = \"123\"\ndef main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)\n    if not password_codepoints:",
+        "detail": "cryptography.Decryptor",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_PASSWORD",
+        "kind": 5,
+        "importPath": "cryptography.Decryptor",
+        "description": "cryptography.Decryptor",
+        "peekOfCode": "DEFAULT_PASSWORD = \"123\"\ndef main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)\n    if not password_codepoints:\n        raise ValueError(\"Password cannot be empty\")",
+        "detail": "cryptography.Decryptor",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "cryptography.Encryptor",
+        "description": "cryptography.Encryptor",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)\n    if not password_codepoints:\n        raise ValueError(\"Password cannot be empty\")\n    processor = FileProcessor(password_codepoints)",
+        "detail": "cryptography.Encryptor",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_INPUT",
+        "kind": 5,
+        "importPath": "cryptography.Encryptor",
+        "description": "cryptography.Encryptor",
+        "peekOfCode": "DEFAULT_INPUT = \"test.txt\"\nDEFAULT_OUTPUT = \"test_output.txt\"\nDEFAULT_PASSWORD = \"123\"\ndef main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)",
+        "detail": "cryptography.Encryptor",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_OUTPUT",
+        "kind": 5,
+        "importPath": "cryptography.Encryptor",
+        "description": "cryptography.Encryptor",
+        "peekOfCode": "DEFAULT_OUTPUT = \"test_output.txt\"\nDEFAULT_PASSWORD = \"123\"\ndef main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)\n    if not password_codepoints:",
+        "detail": "cryptography.Encryptor",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_PASSWORD",
+        "kind": 5,
+        "importPath": "cryptography.Encryptor",
+        "description": "cryptography.Encryptor",
+        "peekOfCode": "DEFAULT_PASSWORD = \"123\"\ndef main():\n    parser = argparse.ArgumentParser(description=\"File Encryption Tool\")\n    parser.add_argument('-i', '--input', default=DEFAULT_INPUT, help=\"Input file\")\n    parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=\"Output file\")\n    parser.add_argument('-p', '--password', default=DEFAULT_PASSWORD, help=\"Password\")\n    args = parser.parse_args()\n    password_codepoints = Utf8Utils.convert_to_code_point_list(args.password)\n    if not password_codepoints:\n        raise ValueError(\"Password cannot be empty\")",
+        "detail": "cryptography.Encryptor",
+        "documentation": {}
+    },
+    {
+        "label": "Decryptor",
+        "kind": 6,
+        "importPath": "processors.FileDecryptor",
+        "description": "processors.FileDecryptor",
+        "peekOfCode": "class Decryptor:\n    def __init__(self, utf8_values: list[int]):\n        if not isinstance(utf8_values, Iterable):\n            raise ValueError(\"Must provide iterable of integers\")\n        self.utf8_values = utf8_values\n        self.big_sum = sum(utf8_values)\n        self._validate_utf8_values()\n    def _validate_utf8_values(self):\n        for val in self.utf8_values:\n            if not (0 <= val <= 0x10FFFF):",
+        "detail": "processors.FileDecryptor",
+        "documentation": {}
+    },
+    {
+        "label": "FileProcessor",
+        "kind": 6,
+        "importPath": "processors.FileEncryptor",
+        "description": "processors.FileEncryptor",
+        "peekOfCode": "class FileProcessor:\n    def __init__(self, utf8_values: list[int]):\n        if not isinstance(utf8_values, Iterable):\n            raise ValueError(\"Must provide iterable of integers\")\n        self.utf8_values = utf8_values\n        self._validate_utf8_values()\n    def _validate_utf8_values(self):\n        for val in self.utf8_values:\n            if not (0 <= val <= 0x10FFFF):\n                raise ValueError(f\"Invalid UTF-8 code point: {val}\")",
+        "detail": "processors.FileEncryptor",
+        "documentation": {}
+    },
+    {
+        "label": "FileProcessor",
+        "kind": 6,
+        "importPath": "PwndaLitePython.FileProcessor",
+        "description": "PwndaLitePython.FileProcessor",
+        "peekOfCode": "class FileProcessor:\n    def __init__(self, utf8_values):\n        # Convert password characters to Unicode code points\n        self.utf8_codepoints = [ord(char) for char in utf8_values]\n        self.bigSum = sum(self.utf8_codepoints)\n        print(f\"bigSum: {self.bigSum}\")\n    def process_file(self, input_file, output_file):\n        adjustedSum = self.bigSum\n        usedValues = set()\n        try:",
+        "detail": "PwndaLitePython.FileProcessor",
+        "documentation": {}
+    },
+    {
+        "label": "RandomSelector",
+        "kind": 6,
+        "importPath": "PwndaLitePython.FileProcessor",
+        "description": "PwndaLitePython.FileProcessor",
+        "peekOfCode": "class RandomSelector:\n    @staticmethod\n    def select_gaussian_index(length):\n        mean = (length - 1) / 2.0\n        std_dev = length / 4.0\n        while True:\n            gaussian = random.gauss(mean, std_dev)\n            index = int(round(gaussian))\n            if 0 <= index < length:\n                return index",
+        "detail": "PwndaLitePython.FileProcessor",
+        "documentation": {}
+    },
+    {
+        "label": "LiteApp",
+        "kind": 6,
+        "importPath": "PwndaLitePython.PwndaLite",
+        "description": "PwndaLitePython.PwndaLite",
+        "peekOfCode": "class LiteApp:\n    def __init__(self, root):\n        self.root = root\n        self.root.title(\"Gaussian Random Number Generator\")\n        self.root.geometry(\"600x550\")  # Increased height for new button\n        # Password source selection\n        self.password_source = tk.StringVar(value=\"manual\")\n        self.manual_radio = tk.Radiobutton(root, text=\"Enter Password\", variable=self.password_source,\n                                           value=\"manual\", command=self.toggle_password_source)\n        self.file_radio = tk.Radiobutton(root, text=\"Load Password from File\", variable=self.password_source,",
+        "detail": "PwndaLitePython.PwndaLite",
+        "documentation": {}
+    },
+    {
+        "label": "date_time",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def date_time(event=None):\n    currentdatetime = datetime.now()\n    formateddatetime=currentdatetime.strftime('%d/%m/%Y %H:%M:%S')\n    textarea.insert(1.0,formateddatetime)\ndef printout(event=None):\n    file=tempfile.mktemp('.txt')\n    open(file,'w').write(textarea.get(1.0,END))\n    os.startfile(file,'print')\ndef change_theme(bg_color,fg_color):\n    textarea.config(bg=bg_color,fg=fg_color)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "printout",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def printout(event=None):\n    file=tempfile.mktemp('.txt')\n    open(file,'w').write(textarea.get(1.0,END))\n    os.startfile(file,'print')\ndef change_theme(bg_color,fg_color):\n    textarea.config(bg=bg_color,fg=fg_color)\ndef toolbarFunc():\n    if show_toolbar.get() == False:\n        tool_bar.pack_forget()\n    if show_toolbar.get() == True:",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "change_theme",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def change_theme(bg_color,fg_color):\n    textarea.config(bg=bg_color,fg=fg_color)\ndef toolbarFunc():\n    if show_toolbar.get() == False:\n        tool_bar.pack_forget()\n    if show_toolbar.get() == True:\n       #toolbar gets packed on button so we have to unpack and pack text area so it can be on top again\n        textarea.pack_forget()\n        tool_bar.pack(fill=X)\n        textarea.pack(fill=BOTH,expand=1)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "toolbarFunc",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def toolbarFunc():\n    if show_toolbar.get() == False:\n        tool_bar.pack_forget()\n    if show_toolbar.get() == True:\n       #toolbar gets packed on button so we have to unpack and pack text area so it can be on top again\n        textarea.pack_forget()\n        tool_bar.pack(fill=X)\n        textarea.pack(fill=BOTH,expand=1)\ndef statusbarFunc():\n    if show_statusbar.get()==False:",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "statusbarFunc",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def statusbarFunc():\n    if show_statusbar.get()==False:\n        status_bar.pack_forget()\n    else:\n        status_bar.pack()\n    bruh = 2\ndef find():\n    #functionality\n    def find_words():\n       textarea.tag_remove('match', 1.0, END)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "find",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def find():\n    #functionality\n    def find_words():\n       textarea.tag_remove('match', 1.0, END)\n       start_pos = '1.0'\n       word = findentryField.get()\n       if word: #used to check if a word exists so while loop doesn't break the app\n        while True:\n           start_pos = textarea.search(word,start_pos,stopindex=END)\n           if not start_pos:",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "statusBarFunction",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def statusBarFunction(event):\n    if textarea.edit_modified():\n        # len() gets length of whatever is in text area\n        words=len(textarea.get(0.0,END).split()) #stores a word as a string when a space is made\n        # 'end-1c' removes the last character which is a \"new line\" character\n        characters=len(textarea.get(0.0,'end-1c')) #finds the length which is just all characters\n        status_bar.config(text=f'Characters: {characters} Words: {words}')\n    textarea.edit_modified(False)\nurl = ''\ndef new_file(event=None):",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "new_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def new_file(event=None):\n    global url\n    url=''\n    textarea.delete(0.0,END)\ndef open_file(event=None):\n    global url\n    url=filedialog.askopenfilename(initialdir=os.getcwd(),title='Select File', filetypes=(('Text File','txt'), ('All Files','*.*')))\n    # This prints the content from data to console\n    # print(data.read())\n    if url != '':",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "open_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def open_file(event=None):\n    global url\n    url=filedialog.askopenfilename(initialdir=os.getcwd(),title='Select File', filetypes=(('Text File','txt'), ('All Files','*.*')))\n    # This prints the content from data to console\n    # print(data.read())\n    if url != '':\n        textarea.delete(0.0, END)\n        data = open(url, 'r') # 'r' is read mode\n        textarea.insert(0.0,data.read())\n        root.title(os.path.basename(url))",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "save_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def save_file(event=None):\n    if url =='':\n        save_url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','txt'),('All Files','*.*')))\n        if save_url is None:\n            pass\n        else:\n            content=textarea.get(0.0,END)\n            save_url.write(content)\n            save_url.close()\n    else:",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "saveas_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def saveas_file(event=None):\n    save_url = filedialog.asksaveasfile(mode='w', defaultextension='.txt', filetypes=(('Text File', 'txt'),\n                                                                                    ('All Files', '*.*')))\n    content = textarea.get(0.0, END)\n    save_url.write(content)\n    save_url.close()\n   #if the file is new then dont remove anything\n    if url != '':\n        os.remove(url)\ndef iexit(event=None):",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "iexit",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def iexit(event=None):\n    #checks if text area was modified\n    if textarea.edit_modified():\n        result=messagebox.askyesnocancel('Warning', 'Do you want to save the file?')\n        if result is True: #if yes\n            if url!='': # if not a new file\n                content=textarea.get(0.0,END)\n                file = open(url, 'w')\n                file.write(content)\n                root.destroy()",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "font_style",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def font_style(event):\n    global fontStyle\n    fontStyle=font_family_variable.get()\n    textarea.config(font=(fontStyle,fontSize))\ndef font_size(event):\n    global fontSize\n    fontSize = size_variable.get()\n    textarea.config(font=(fontStyle, fontSize))\ndef bold_text():\n    text_property=font.Font(font=textarea['font']).actual()",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "font_size",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def font_size(event):\n    global fontSize\n    fontSize = size_variable.get()\n    textarea.config(font=(fontStyle, fontSize))\ndef bold_text():\n    text_property=font.Font(font=textarea['font']).actual()\n    if text_property['weight']=='normal':\n        textarea.config(font=(fontStyle,fontSize,'bold'))\n    if text_property['weight']=='bold':\n        textarea.config(font=(fontStyle,fontSize,'normal'))",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "bold_text",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def bold_text():\n    text_property=font.Font(font=textarea['font']).actual()\n    if text_property['weight']=='normal':\n        textarea.config(font=(fontStyle,fontSize,'bold'))\n    if text_property['weight']=='bold':\n        textarea.config(font=(fontStyle,fontSize,'normal'))\ndef italic_text():\n    text_property = font.Font(font=textarea['font']).actual()\n    #print(text_property)\n    if text_property['slant'] == 'roman':",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "italic_text",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def italic_text():\n    text_property = font.Font(font=textarea['font']).actual()\n    #print(text_property)\n    if text_property['slant'] == 'roman':\n        textarea.config(font=(fontStyle, fontSize, 'italic'))\n    if text_property['slant'] == 'italic':\n        textarea.config(font=(fontStyle, fontSize, 'roman'))\ndef underline_text():\n    text_property = font.Font(font=textarea['font']).actual()\n    if text_property['underline'] == 0:",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "underline_text",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def underline_text():\n    text_property = font.Font(font=textarea['font']).actual()\n    if text_property['underline'] == 0:\n        textarea.config(font=(fontStyle, fontSize, 'underline'))\n    if text_property['underline'] == 1:\n        textarea.config(font=(fontStyle, fontSize))\ndef color_select():\n    color=colorchooser.askcolor()\n    textarea.config(fg=color[1])\ndef align_right():",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "color_select",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def color_select():\n    color=colorchooser.askcolor()\n    textarea.config(fg=color[1])\ndef align_right():\n    data = textarea.get(0.0, END)\n    textarea.tag_config('right', justify=RIGHT)\n    textarea.delete(0.0, END)\n    textarea.insert(INSERT, data, 'right')\ndef align_left():\n    data = textarea.get(0.0, END)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "align_right",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def align_right():\n    data = textarea.get(0.0, END)\n    textarea.tag_config('right', justify=RIGHT)\n    textarea.delete(0.0, END)\n    textarea.insert(INSERT, data, 'right')\ndef align_left():\n    data = textarea.get(0.0, END)\n    textarea.tag_config('left', justify=LEFT)\n    textarea.delete(0.0, END)\n    textarea.insert(INSERT, data, 'left')",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "align_left",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def align_left():\n    data = textarea.get(0.0, END)\n    textarea.tag_config('left', justify=LEFT)\n    textarea.delete(0.0, END)\n    textarea.insert(INSERT, data, 'left')\ndef align_center():\n    data = textarea.get(0.0, END)\n    textarea.tag_config('center', justify=CENTER)\n    textarea.delete(0.0, END)\n    textarea.insert(INSERT, data, 'center')",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "align_center",
+        "kind": 2,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "def align_center():\n    data = textarea.get(0.0, END)\n    textarea.tag_config('center', justify=CENTER)\n    textarea.delete(0.0, END)\n    textarea.insert(INSERT, data, 'center')\nroot=Tk()\nroot.title('PwndaTxt')\nroot.geometry('1200x620+10+10')\nroot.resizable(False,False)\n#root.resizable(True,True)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "url = ''\ndef new_file(event=None):\n    global url\n    url=''\n    textarea.delete(0.0,END)\ndef open_file(event=None):\n    global url\n    url=filedialog.askopenfilename(initialdir=os.getcwd(),title='Select File', filetypes=(('Text File','txt'), ('All Files','*.*')))\n    # This prints the content from data to console\n    # print(data.read())",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "menubar.add_cascade(label",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "menubar.add_cascade(label = 'File', menu=filemenu)\nnewImage=PhotoImage(file='../../photos/new.png')\nfilemenu.add_command(label='New',accelerator='Ctrl+N',image=newImage,compound=LEFT,command=new_file)\nopenImage=PhotoImage(file='../../photos/open.png')\nfilemenu.add_command(label='Open',accelerator='Ctrl+O',image=openImage,compound=LEFT,command=open_file)\nsaveImage=PhotoImage(file='../../photos/save.png')\nfilemenu.add_command(label='Save',accelerator='Ctrl+S',image=saveImage,compound=LEFT,command=save_file)\nsave_asImage=PhotoImage(file='../../photos/save_as.png')\nfilemenu.add_command(label='Save As',accelerator='Ctrl+Alt+S',image=save_asImage,compound=LEFT,command=saveas_file)\n#print",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "tool_bar",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "tool_bar = Label(root)\ntool_bar.pack(side=TOP, fill=X)\nfont_families=font.families()\nfont_family_variable=StringVar()\n#Fonts\nfontfamily_Combobox=Combobox(tool_bar, width=30, values=font_families, state='readonly',textvariable=font_family_variable)\nfontfamily_Combobox.current(font_families.index('Consolas')) #Default font\nfontfamily_Combobox.grid(row=0,column=0,padx=5)\nfontfamily_Combobox.bind('<<ComboboxSelected>>', font_style)\n#Font sizes",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "menubar.add_cascade(label",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "menubar.add_cascade(label = 'Edit', menu=editmenu)\n#View Menu\nshow_toolbar = BooleanVar()\nshow_statusbar = BooleanVar()\nstatusImage=PhotoImage(file='../../photos/status_bar.png')\ntoolbarImage=PhotoImage(file='../../photos/tool_bar.png')\nviewmenu=Menu(menubar, tearoff=False)\nviewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT,command=toolbarFunc)\nshow_toolbar.set(True)\nviewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT,command=statusbarFunc)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "show_toolbar",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "show_toolbar = BooleanVar()\nshow_statusbar = BooleanVar()\nstatusImage=PhotoImage(file='../../photos/status_bar.png')\ntoolbarImage=PhotoImage(file='../../photos/tool_bar.png')\nviewmenu=Menu(menubar, tearoff=False)\nviewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT,command=toolbarFunc)\nshow_toolbar.set(True)\nviewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT,command=statusbarFunc)\nshow_statusbar.set(True)\nmenubar.add_cascade(label='View', menu=viewmenu)",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "show_statusbar",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "show_statusbar = BooleanVar()\nstatusImage=PhotoImage(file='../../photos/status_bar.png')\ntoolbarImage=PhotoImage(file='../../photos/tool_bar.png')\nviewmenu=Menu(menubar, tearoff=False)\nviewmenu.add_checkbutton(label='Toolbar', variable=show_toolbar, onvalue=True, offvalue=False, image=toolbarImage, compound=LEFT,command=toolbarFunc)\nshow_toolbar.set(True)\nviewmenu.add_checkbutton(label='Status Bar', variable=show_statusbar, onvalue=True, offvalue=False, image=statusImage, compound=LEFT,command=statusbarFunc)\nshow_statusbar.set(True)\nmenubar.add_cascade(label='View', menu=viewmenu)\n#Themes menu",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "menubar.add_cascade(label",
+        "kind": 5,
+        "importPath": "PwndaTxt.backups.bumain",
+        "description": "PwndaTxt.backups.bumain",
+        "peekOfCode": "menubar.add_cascade(label = 'Themes', menu=themesmenu)\ntheme_choice=StringVar()\nlightImage=PhotoImage(file='../../photos/light_default.png')\nthemesmenu.add_radiobutton(label='LightDefault',image=lightImage,variable=theme_choice,compound=LEFT\n                           ,command=lambda :change_theme('white','black'))\ndarkImage=PhotoImage(file='../../photos/dark.png')\nthemesmenu.add_radiobutton(label='dark',image=darkImage,variable=theme_choice,compound=LEFT\n                           ,command=lambda :change_theme('gray20','white'))\npinkImage=PhotoImage(file='../../photos/red.png')\nthemesmenu.add_radiobutton(label='red',image=pinkImage,variable=theme_choice,compound=LEFT",
+        "detail": "PwndaTxt.backups.bumain",
+        "documentation": {}
+    },
+    {
+        "label": "new_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.file_operations",
+        "description": "PwndaTxt.modules.file_operations",
+        "peekOfCode": "def new_file(text_area, app):\n    app.url = ''\n    text_area.delete(1.0, tk.END)\ndef open_file(text_area, app):\n    url = filedialog.askopenfilename(\n        initialdir=os.getcwd(),\n        title='Select File',\n        filetypes=(('Text File', '*.txt'), ('All Files', '*.*'))\n    )\n    if not url:",
+        "detail": "PwndaTxt.modules.file_operations",
+        "documentation": {}
+    },
+    {
+        "label": "open_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.file_operations",
+        "description": "PwndaTxt.modules.file_operations",
+        "peekOfCode": "def open_file(text_area, app):\n    url = filedialog.askopenfilename(\n        initialdir=os.getcwd(),\n        title='Select File',\n        filetypes=(('Text File', '*.txt'), ('All Files', '*.*'))\n    )\n    if not url:\n        return\n    # Convert to absolute path immediately\n    url = os.path.abspath(url)",
+        "detail": "PwndaTxt.modules.file_operations",
+        "documentation": {}
+    },
+    {
+        "label": "save_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.file_operations",
+        "description": "PwndaTxt.modules.file_operations",
+        "peekOfCode": "def save_file(text_area, app):\n    if not app.url:\n        saveas_file(text_area, app)\n    else:\n        content = text_area.get(1.0, tk.END)\n        password = app.password_var.get()\n        if password:\n            # Save with encryption\n            if save_encrypted(content, app.url, password):\n                text_area.edit_modified(False)",
+        "detail": "PwndaTxt.modules.file_operations",
+        "documentation": {}
+    },
+    {
+        "label": "save_encrypted",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.file_operations",
+        "description": "PwndaTxt.modules.file_operations",
+        "peekOfCode": "def save_encrypted(content, file_path, password):\n    try:\n        # Convert password to UTF-8 code points\n        utf8_values = Utf8Utils.convert_to_code_point_list(password)\n        # Encrypt the temporary file to final location\n        encryptor = FileProcessor(utf8_values)\n        encrypted_content = encryptor.encrypt_string(content)\n        # Save encrypted content\n        with open(file_path, 'w', encoding='utf-8') as file:\n            file.write(encrypted_content)",
+        "detail": "PwndaTxt.modules.file_operations",
+        "documentation": {}
+    },
+    {
+        "label": "saveas_file",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.file_operations",
+        "description": "PwndaTxt.modules.file_operations",
+        "peekOfCode": "def saveas_file(text_area, app):\n    url = filedialog.asksaveasfilename(\n        defaultextension='.txt',\n        filetypes=(('Text File', '*.txt'), ('All Files', '*.*'))\n    )\n    if not url:\n         return\n    app.url = url\n    content = text_area.get(1.0, tk.END)\n    password = app.password_var.get()",
+        "detail": "PwndaTxt.modules.file_operations",
+        "documentation": {}
+    },
+    {
+        "label": "iexit",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.file_operations",
+        "description": "PwndaTxt.modules.file_operations",
+        "peekOfCode": "def iexit(text_area, root, app):\n    if text_area.edit_modified():\n        result = messagebox.askyesnocancel('Warning', 'Do you want to save the file?')\n        if result is True:\n            if app.url:\n                save_file(text_area, app)\n                root.destroy()\n            else:\n                saveas_file(text_area, app)\n                root.destroy()",
+        "detail": "PwndaTxt.modules.file_operations",
+        "documentation": {}
+    },
+    {
+        "label": "change_theme",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def change_theme(bg_color, fg_color, text_area):\n    text_area.config(bg=bg_color, fg=fg_color)\ndef font_style(style, size, text_area):\n    text_area.config(font=(style, size))\ndef font_size(style, size, text_area):\n    text_area.config(font=(style, size))\ndef bold_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    weight = 'bold' if text_property['weight'] == 'normal' else 'normal'\n    text_area.config(font=(style, size, weight))",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "font_style",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def font_style(style, size, text_area):\n    text_area.config(font=(style, size))\ndef font_size(style, size, text_area):\n    text_area.config(font=(style, size))\ndef bold_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    weight = 'bold' if text_property['weight'] == 'normal' else 'normal'\n    text_area.config(font=(style, size, weight))\ndef italic_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "font_size",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def font_size(style, size, text_area):\n    text_area.config(font=(style, size))\ndef bold_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    weight = 'bold' if text_property['weight'] == 'normal' else 'normal'\n    text_area.config(font=(style, size, weight))\ndef italic_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    slant = 'italic' if text_property['slant'] == 'roman' else 'roman'\n    text_area.config(font=(style, size, slant))",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "bold_text",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def bold_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    weight = 'bold' if text_property['weight'] == 'normal' else 'normal'\n    text_area.config(font=(style, size, weight))\ndef italic_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    slant = 'italic' if text_property['slant'] == 'roman' else 'roman'\n    text_area.config(font=(style, size, slant))\ndef underline_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "italic_text",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def italic_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    slant = 'italic' if text_property['slant'] == 'roman' else 'roman'\n    text_area.config(font=(style, size, slant))\ndef underline_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    underline = 1 if text_property['underline'] == 0 else 0\n    text_area.config(font=(style, size), underline=underline)\ndef color_select(text_area):\n    color = colorchooser.askcolor()",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "underline_text",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def underline_text(style, size, text_area):\n    text_property = font.Font(font=text_area['font']).actual()\n    underline = 1 if text_property['underline'] == 0 else 0\n    text_area.config(font=(style, size), underline=underline)\ndef color_select(text_area):\n    color = colorchooser.askcolor()\n    if color[1]:\n        text_area.config(fg=color[1])\ndef align_left(text_area):\n    data = text_area.get(1.0, tk.END)",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "color_select",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def color_select(text_area):\n    color = colorchooser.askcolor()\n    if color[1]:\n        text_area.config(fg=color[1])\ndef align_left(text_area):\n    data = text_area.get(1.0, tk.END)\n    text_area.tag_config('left', justify=tk.LEFT)\n    text_area.delete(1.0, tk.END)\n    text_area.insert(tk.INSERT, data, 'left')\ndef align_center(text_area):",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "align_left",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def align_left(text_area):\n    data = text_area.get(1.0, tk.END)\n    text_area.tag_config('left', justify=tk.LEFT)\n    text_area.delete(1.0, tk.END)\n    text_area.insert(tk.INSERT, data, 'left')\ndef align_center(text_area):\n    data = text_area.get(1.0, tk.END)\n    text_area.tag_config('center', justify=tk.CENTER)\n    text_area.delete(1.0, tk.END)\n    text_area.insert(tk.INSERT, data, 'center')",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "align_center",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def align_center(text_area):\n    data = text_area.get(1.0, tk.END)\n    text_area.tag_config('center', justify=tk.CENTER)\n    text_area.delete(1.0, tk.END)\n    text_area.insert(tk.INSERT, data, 'center')\ndef align_right(text_area):\n    data = text_area.get(1.0, tk.END)\n    text_area.tag_config('right', justify=tk.RIGHT)\n    text_area.delete(1.0, tk.END)\n    text_area.insert(tk.INSERT, data, 'right')",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "align_right",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.formatting",
+        "description": "PwndaTxt.modules.formatting",
+        "peekOfCode": "def align_right(text_area):\n    data = text_area.get(1.0, tk.END)\n    text_area.tag_config('right', justify=tk.RIGHT)\n    text_area.delete(1.0, tk.END)\n    text_area.insert(tk.INSERT, data, 'right')",
+        "detail": "PwndaTxt.modules.formatting",
+        "documentation": {}
+    },
+    {
+        "label": "TextEditor",
+        "kind": 6,
+        "importPath": "PwndaTxt.modules.gui",
+        "description": "PwndaTxt.modules.gui",
+        "peekOfCode": "class TextEditor:\n    def __init__(self):\n        self.root = tk.Tk()\n        self.root.title('PwndaTxt')\n        self.root.geometry('1200x620+10+10')\n        self.root.resizable(False, False)\n        self.url = ''\n        self.font_size = 12\n        self.font_style = 'Consolas'\n        self.show_toolbar = tk.BooleanVar(value=True)",
+        "detail": "PwndaTxt.modules.gui",
+        "documentation": {}
+    },
+    {
+        "label": "find",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.search",
+        "description": "PwndaTxt.modules.search",
+        "peekOfCode": "def find(text_area):\n    def find_words():\n        text_area.tag_remove('match', 1.0, tk.END)\n        start_pos = '1.0'\n        word = find_entry.get()\n        if word:\n            while True:\n                start_pos = text_area.search(word, start_pos, stopindex=tk.END)\n                if not start_pos:\n                    break",
+        "detail": "PwndaTxt.modules.search",
+        "documentation": {}
+    },
+    {
+        "label": "date_time",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.utilities",
+        "description": "PwndaTxt.modules.utilities",
+        "peekOfCode": "def date_time(text_area):\n    current_datetime = datetime.now()\n    formatted_datetime = current_datetime.strftime('%d/%m/%Y %H:%M:%S')\n    text_area.insert(tk.INSERT, formatted_datetime)\ndef printout(text_area):\n    file = tempfile.mktemp('.txt')\n    with open(file, 'w') as f:\n        f.write(text_area.get(1.0, tk.END))\n    os.startfile(file, 'print')\ndef statusBarFunction(event, text_area, status_bar):",
+        "detail": "PwndaTxt.modules.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "printout",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.utilities",
+        "description": "PwndaTxt.modules.utilities",
+        "peekOfCode": "def printout(text_area):\n    file = tempfile.mktemp('.txt')\n    with open(file, 'w') as f:\n        f.write(text_area.get(1.0, tk.END))\n    os.startfile(file, 'print')\ndef statusBarFunction(event, text_area, status_bar):\n    if text_area.edit_modified():\n        content = text_area.get(1.0, 'end-1c')\n        char_count = len(content)\n        word_count = len(content.split())",
+        "detail": "PwndaTxt.modules.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "statusBarFunction",
+        "kind": 2,
+        "importPath": "PwndaTxt.modules.utilities",
+        "description": "PwndaTxt.modules.utilities",
+        "peekOfCode": "def statusBarFunction(event, text_area, status_bar):\n    if text_area.edit_modified():\n        content = text_area.get(1.0, 'end-1c')\n        char_count = len(content)\n        word_count = len(content.split())\n        status_bar.config(text=f'Characters: {char_count} Words: {word_count}')\n    text_area.edit_modified(False)",
+        "detail": "PwndaTxt.modules.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "RandomSelector",
+        "kind": 6,
+        "importPath": "utlities.RandomSelector",
+        "description": "utlities.RandomSelector",
+        "peekOfCode": "class RandomSelector:\n    @staticmethod\n    def select_gaussian_index(values: list[int]) -> int:\n        if not values:\n            raise ValueError(\"Values list cannot be empty\")\n        mean = (len(values) - 1) / 2.0\n        std_dev = len(values) / 4.0\n        while True:\n            gaussian = random.gauss(mean, std_dev)\n            selected_index = int(round(gaussian))",
+        "detail": "utlities.RandomSelector",
+        "documentation": {}
+    },
+    {
+        "label": "Utf8Utils",
+        "kind": 6,
+        "importPath": "utlities.Utf8Utils",
+        "description": "utlities.Utf8Utils",
+        "peekOfCode": "class Utf8Utils:\n    @staticmethod\n    def convert_to_code_point_list(input_str: str) -> list[int]:\n        return [ord(char) for char in input_str]",
+        "detail": "utlities.Utf8Utils",
+        "documentation": {}
+    },
+    {
+        "label": "HomePage",
+        "kind": 6,
+        "importPath": "HomePage",
+        "description": "HomePage",
+        "peekOfCode": "class HomePage:\n    def __init__(self, root):\n        self.root = root\n        self.root.title(\"PwndaApps Home\")\n        self.root.geometry(\"500x300\")\n        self.root.resizable(False, False)\n        self.create_widgets()\n    def create_widgets(self):\n        style = ttk.Style()\n        style.configure('Title.TLabel', font=('Arial', 24, 'bold'), foreground='#2c3e50')",
+        "detail": "HomePage",
+        "documentation": {}
+    }
+]

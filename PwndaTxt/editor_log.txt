@@ -1,2 +1,1 @@
-bigSum: 1895
-bigSum: 1896
+bigSum: 150
