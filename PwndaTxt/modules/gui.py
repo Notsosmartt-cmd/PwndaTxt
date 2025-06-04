@@ -21,6 +21,7 @@ class TextEditor:
         self.show_toolbar = tk.BooleanVar(value=True)
         self.show_statusbar = tk.BooleanVar(value=True)
 
+        self.password_var = tk.StringVar()
         self.load_menu_images()
         self.setup_menus()
         self.create_toolbar()
@@ -319,6 +320,28 @@ class TextEditor:
                           command=self.go_to_home)
         home_btn.grid(row=0, column=9, padx=5)
 
+        # NEW PASSWORD INPUT
+        # Password label
+        ttk.Label(self.tool_bar, text="Password:").grid(row=0, column=10, padx=(20, 5))
+
+        # Password entry (shows * for characters)
+        self.password_entry = ttk.Entry(
+            self.tool_bar,
+            textvariable=self.password_var,
+            show="*",  # Masks input with asterisks
+            width=15
+        )
+        self.password_entry.grid(row=0, column=11, padx=5)
+
+        # Reveal/hide toggle button
+        self.show_password = tk.BooleanVar(value=False)
+        ttk.Checkbutton(
+            self.tool_bar,
+            text="👁️",
+            command=self.toggle_password_visibility,
+            variable=self.show_password
+        ).grid(row=0, column=12, padx=5)
+
     def create_text_area(self):
         self.scrollbar = ttk.Scrollbar(self.root)
         self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
@@ -382,6 +405,13 @@ class TextEditor:
 
         except Exception as e:
             messagebox.showerror("Error", f"Failed to return to homepage: {e}")
+
+    def toggle_password_visibility(self):
+        """Toggle between showing password text and asterisks"""
+        if self.show_password.get():
+            self.password_entry.config(show="")  # Show plain text
+        else:
+            self.password_entry.config(show="*")  # Show asterisks
 
     def run(self):
         self.root.mainloop()

@@ -47,7 +47,7 @@ class LiteApp:
         self.encrypt_btn.pack(side=tk.LEFT, padx=5)
 
         self.decrypt_btn = tk.Button(button_frame, text="Decrypt", command=self.decrypt_files)
-        self.decrypt_btn.pack(side=tk.LEFT, padx=5)
+        self.decrypt_btn.pack(side=tk.LEFT, padx=(150,5))
 
         # Initialize state
         self.toggle_password_source()

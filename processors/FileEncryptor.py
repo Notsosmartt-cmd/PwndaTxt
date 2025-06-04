@@ -1,3 +1,4 @@
+import os
 from collections.abc import Iterable
 from utlities.RandomSelector import RandomSelector
 
@@ -14,6 +15,16 @@ class FileProcessor:
                 raise ValueError(f"Invalid UTF-8 code point: {val}")
 
     def process_file(self, input_path: str, output_path: str):
+        # Verify paths exist
+        input_path = os.path.abspath(input_path)
+        output_path = os.path.abspath(output_path)
+
+        if not os.path.exists(input_path):
+            raise FileNotFoundError(f"Input file not found: {input_path}")
+
+        # Ensure output directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
         big_sum = sum(self.utf8_values)
         print(f"bigSum: {big_sum}")
 
