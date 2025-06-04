@@ -1,3 +1,2 @@
-Decrypted values written to file: C:\Users\user\AppData\Local\Temp\pwnda_decrypted_26560.txt
-Decrypted values written to file: C:\Users\user\AppData\Local\Temp\pwnda_decrypted_26560.txt
-Decrypted values written to file: C:\Users\user\AppData\Local\Temp\pwnda_decrypted_26560.txt
+bigSum: 1895
+bigSum: 1896

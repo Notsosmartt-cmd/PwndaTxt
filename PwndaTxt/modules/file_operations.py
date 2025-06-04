@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from processors.FileDecryptor import Decryptor
 from utlities.Utf8Utils import Utf8Utils
-
+from processors.FileEncryptor import FileProcessor
 
 
 def new_file(text_area, app):
@@ -49,22 +49,12 @@ def open_file(text_area, app):
         # Create decryptor with password
         decryptor = Decryptor(utf8_values)
 
-        # Create temporary output file with absolute path
-        temp_dir = os.path.abspath(tempfile.gettempdir())
-        temp_path = os.path.join(temp_dir, f"pwnda_decrypted_{os.getpid()}.txt")
-
-        # Decrypt file to temporary location
-        decryptor.process_file(url, temp_path)
-
-        # Read decrypted content from temp file
-        with open(temp_path, 'r', encoding='utf-8') as decrypted_file:
-            decrypted_content = decrypted_file.read()
+        # Decrypt file directly to string
+        decrypted_content = decryptor.decrypt_file_to_string(url)
 
         # Insert decrypted content into text area
         text_area.insert(1.0, decrypted_content)
-
-        # Clean up temporary file
-        os.unlink(temp_path)
+        app.root.title(f"{os.path.basename(url)} [Decrypted]")
 
     except Exception as e:
         # Log detailed error
@@ -88,22 +78,70 @@ def save_file(text_area, app):
         saveas_file(text_area, app)
     else:
         content = text_area.get(1.0, tk.END)
-        with open(app.url, 'w') as file:
-            file.write(content)
-        text_area.edit_modified(False)
+        password = app.password_var.get()
+
+        if password:
+            # Save with encryption
+            if save_encrypted(content, app.url, password):
+                text_area.edit_modified(False)
+        else:
+            # Save without encryption
+            try:
+                with open(app.url, 'w', encoding='utf-8') as file:
+                    file.write(content)
+                text_area.edit_modified(False)
+            except Exception as e:
+                messagebox.showerror("Save Error", f"Failed to save file: {str(e)}")
+
+def save_encrypted(content, file_path, password):
+    try:
+        # Convert password to UTF-8 code points
+        utf8_values = Utf8Utils.convert_to_code_point_list(password)
+
+        # Encrypt the temporary file to final location
+        encryptor = FileProcessor(utf8_values)
+        encrypted_content = encryptor.encrypt_string(content)
+
+        # Save encrypted content
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(encrypted_content)
+        return True
+
+
+
+    except Exception as e:
+        messagebox.showerror("Encryption Error", f"Failed to encrypt file: {str(e)}")
+        return False
+
 
 def saveas_file(text_area, app):
-    url = filedialog.asksaveasfile(
-        mode='w',
+    url = filedialog.asksaveasfilename(
         defaultextension='.txt',
         filetypes=(('Text File', '*.txt'), ('All Files', '*.*'))
     )
-    if url:
-        content = text_area.get(1.0, tk.END)
-        url.write(content)
-        url.close()
-        app.url = url.name
-        app.root.title(os.path.basename(url.name))
+
+    if not url:
+         return
+
+    app.url = url
+    content = text_area.get(1.0, tk.END)
+    password = app.password_var.get()
+
+    if password:
+        # Save with encryption
+        if save_encrypted(content, url, password):
+            text_area.edit_modified(False)
+            app.root.title(f"{os.path.basename(url)} [Encrypted]")
+    else:
+        # Save without encryption
+        try:
+            with open(url, 'w', encoding='utf-8') as file:
+                file.write(content)
+            text_area.edit_modified(False)
+            app.root.title(os.path.basename(url))
+        except Exception as e:
+            messagebox.showerror("Save Error", f"Failed to save file: {str(e)}")
+
 
 def iexit(text_area, root, app):
     if text_area.edit_modified():

@@ -69,3 +69,48 @@ class FileProcessor:
         except IOError as e:
             print(f"Error: {str(e)}")
             raise
+
+    def process_bytes(self, data: bytes) -> bytes:
+        """Process data in memory from bytes to bytes"""
+        # Decode bytes to string for processing
+        text = data.decode('utf-8')
+        encrypted_text = self.process_string(text)
+        return encrypted_text.encode('utf-8')
+
+    def encrypt_string(self, text: str) -> str:
+        """Process string in memory and return encrypted result"""
+        big_sum = sum(self.utf8_values)
+        print(f"bigSum: {big_sum}")
+
+        adjusted_sum = big_sum
+        used_values = set()
+
+        output_lines = []
+
+        for char in text:
+            if adjusted_sum <= 0:
+
+                adjusted_sum = big_sum
+                used_values.clear()
+
+            password_index = RandomSelector.select_gaussian_index(self.utf8_values)
+            password_char_value = self.utf8_values[password_index]
+
+            if password_char_value not in used_values:
+                used_values.add(password_char_value)
+                adjusted_sum -= password_char_value
+
+            file_char_value = ord(char)
+            raw_value = file_char_value + password_char_value + adjusted_sum
+            encrypted_value = raw_value % 0x110000
+
+            try:
+                encrypted_char = chr(encrypted_value)
+                # Validate the character can be encoded as UTF-8
+                encrypted_char.encode('utf-8', errors='strict')
+            except (ValueError, UnicodeEncodeError):
+                encrypted_char = '\ufffd'  # Replacement character
+
+            output_lines.append(f"{password_index}/{encrypted_char}")
+
+        return '\n'.join(output_lines)

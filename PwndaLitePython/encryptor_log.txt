@@ -1,9 +1,4 @@
-bigSum: 150
-Encrypted values written to file: B:\Aa\(Pwnda)(Pwnda)test.txt
-Decrypted values written to file: B:/Aa\(decrypted)(Pwnda)test.txt
-bigSum: 1763
-Encrypted values written to file: B:\Aa\(Pwnda)Casp+.txt
-bigSum: 1763
-Encrypted values written to file: B:\Aa\(Pwnda)Casp+.txt
-bigSum: 1763
+bigSum: 1895
 Encrypted values written to file: B:\Aa\(Pwnda)LoremSmall.txt
+bigSum: 1895
+Encrypted values written to file: B:\Aa\(Pwnda)test.txt

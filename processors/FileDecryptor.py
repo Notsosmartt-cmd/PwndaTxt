@@ -1,3 +1,4 @@
+import os
 from collections.abc import Iterable
 
 
@@ -61,3 +62,131 @@ class Decryptor:
         except IOError as e:
             print(f"Error: {str(e)}")
             raise
+
+    def decrypt_file_to_string(self, input_path: str) -> str:
+        """
+        Reads an encrypted file and returns the decrypted content as a string
+        """
+        # Verify input file exists
+        input_path = os.path.abspath(input_path)
+        if not os.path.exists(input_path):
+            raise FileNotFoundError(f"Input file not found: {input_path}")
+
+        adjusted_sum = self.big_sum
+        used_values = set()
+        decrypted_chars = []
+
+        try:
+            with open(input_path, 'r', encoding='utf-8') as reader:
+                for line in reader:
+                    line = line.strip()
+                    if not line or '/' not in line:
+                        continue  # Skip empty or invalid lines
+
+                    # Split into index and encrypted character
+                    parts = line.split('/', 1)
+                    index_str = parts[0].strip()
+                    encrypted_char = parts[1].strip()
+
+                    # Skip lines without both components
+                    if not index_str or not encrypted_char:
+                        continue
+
+                    try:
+                        # Get password character using index
+                        password_index = int(index_str)
+                        password_char = self.utf8_values[password_index]
+                    except (ValueError, IndexError):
+                        # Invalid index - use replacement character
+                        decrypted_chars.append('\ufffd')
+                        continue
+
+                    # Reset adjustment sum when depleted
+                    if adjusted_sum <= 0:
+                        adjusted_sum = self.big_sum
+                        used_values.clear()
+
+                    # Track used values and adjust sum
+                    if password_char not in used_values:
+                        used_values.add(password_char)
+                        adjusted_sum -= password_char
+
+                    # Decrypt the character
+                    try:
+                        encrypted_code = ord(encrypted_char)
+                        # Reverse the encryption calculation
+                        original_code = (encrypted_code - password_char - adjusted_sum) % 0x110000
+                        original_char = chr(original_code)
+
+                        # Validate it's a proper UTF-8 character
+                        original_char.encode('utf-8', errors='strict')
+                    except (ValueError, UnicodeEncodeError):
+                        original_char = '\ufffd'  # Replacement character
+
+                    decrypted_chars.append(original_char)
+
+            return ''.join(decrypted_chars)
+
+        except IOError as e:
+            raise IOError(f"Error reading file: {str(e)}")
+
+    def decrypt_string(self, encrypted_content: str) -> str:
+        """
+        Decrypts a string in memory using the same algorithm as process_file
+        Returns decrypted plain text
+        """
+        adjusted_sum = self.big_sum
+        used_values = set()
+        decrypted_chars = []
+
+        lines = encrypted_content.split('\n')
+
+        for line in lines:
+            line = line.strip()
+            if not line or '/' not in line:
+                continue  # Skip empty or invalid lines
+
+            # Split into index and encrypted character
+            parts = line.split('/', 1)
+            index_str = parts[0].strip()
+            encrypted_char = parts[1].strip()
+
+            # Skip lines without both components
+            if not index_str or not encrypted_char:
+                continue
+
+            try:
+                # Get password character using index
+                password_index = int(index_str)
+                password_char = self.utf8_values[password_index]
+            except (ValueError, IndexError):
+                # Invalid index - use replacement character
+                decrypted_chars.append('\ufffd')
+                continue
+
+            # Reset adjustment sum when depleted
+            if adjusted_sum <= 0:
+                adjusted_sum = self.big_sum
+                used_values.clear()
+
+            # Track used values and adjust sum
+            if password_char not in used_values:
+                used_values.add(password_char)
+                adjusted_sum -= password_char
+
+            # Decrypt the character
+            try:
+                encrypted_code = ord(encrypted_char)
+                # Reverse the encryption calculation
+                original_code = (encrypted_code - password_char - adjusted_sum) % 0x110000
+                original_char = chr(original_code)
+
+                # Validate it's a proper UTF-8 character
+                original_char.encode('utf-8', errors='strict')
+            except (ValueError, UnicodeEncodeError):
+                original_char = '\ufffd'  # Replacement character
+
+            decrypted_chars.append(original_char)
+
+        return ''.join(decrypted_chars)
+
